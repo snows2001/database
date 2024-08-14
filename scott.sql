@@ -40,25 +40,6 @@ INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (79
 INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (7902, 'FORD', 'ANALYST', 7566, TO_DATE('03-12-81', 'DD-MM-RR'), 3000, NULL, 20);
 INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (7934, 'MILLER', 'CLERK', 7782, TO_DATE('23-01-82', 'DD-MM-RR'), 1300, NULL, 10);
 
--- BONUS 테이블 생성
-CREATE TABLE bonus
-  (ename    VARCHAR2(10),
-   job      VARCHAR2(9),
-   sal      NUMBER,
-   comm     NUMBER);
-
-INSERT INTO bonus VALUES (7839,'NULL',NULL,0);
-INSERT INTO bonus VALUES (7698,'NULL',NULL,0);
-INSERT INTO bonus VALUES (7782,'NULL',NULL,0);
-INSERT INTO bonus VALUES (7566,'NULL',NULL,0);
-INSERT INTO bonus VALUES (7654,'NULL',NULL,0);
-INSERT INTO bonus VALUES (7499,'NULL',NULL,0);
-INSERT INTO bonus VALUES (7844,'NULL',NULL,0);
-INSERT INTO bonus VALUES (7900,'NULL',NULL,0);
-INSERT INTO bonus VALUES (7521,'NULL',NULL,0);
-INSERT INTO bonus VALUES (7902,'NULL',NULL,0);
-INSERT INTO bonus VALUES (7369,'NULL',NULL,0);
-
 
 -- SALGRADE 테이블 생성
 CREATE TABLE salgrade
