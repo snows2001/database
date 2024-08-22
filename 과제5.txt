@@ -1,0 +1,21 @@
+1.DEPT 테이블을 생성하시오.
+    DEPTNO NUMBER 2
+    DNAME VARCHAR2 14
+    LOC VARCHAR2 13
+
+2.EMP 테이블을 생성하시오.
+    EMPNO NUMBER 2
+    ENAME VACHAR2 10
+    DEPTNO NUMBER 2
+
+3.긴 이름을 저장할 수 있도록 EMP 테이블 수정 : 크기 10 - >25 으로
+
+4.EMP 테이블을 복사해서 EMPPLOYEE2란 이름의 테이블을 생성하되
+  사원번호, 이름, 급여, 부서번호 칼럼만 복사하고 새로 생성된 테이블의 칼럼명은 각각
+  EMP_ID, NAME, SAL, DEPT_ID로 지정하시오.
+
+5.EMP 테이블 삭제
+
+6.EMP2란 이름을 EMP로 변경하시오.
+
+7.DEPT 테이브에서 DNAME 칼럼을 제거하시오.
