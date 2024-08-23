@@ -15,15 +15,17 @@ INSERT INTO dept (deptno, dname, loc)
   VALUES (40, 'OPERATIONS', 'BOSTON');
 
 -- EMP 테이블 생성
-CREATE TABLE emp
-  (empno    NUMBER(4) CONSTRAINT PK_EMP PRIMARY KEY,
-   ename    VARCHAR2(10),
-   job      VARCHAR2(9),
-   mgr      NUMBER(4),
-   hiredate DATE,
-   sal      NUMBER(7,2),
-   comm     NUMBER(7,2),
-   deptno   NUMBER(2) CONSTRAINT FK_DEPTNO REFERENCES dept);
+CREATE TABLE EMP(
+     EMPNO NUMBER(4)    PRIMARY KEY,
+     ENAME VARCHAR2(10) NOT NULL,
+     JOB VARCHAR2(15)   CHECK (JOB IN ('CLERK','SALESMAN','MANAGER','ANALYST','PRESIDENT')),
+     MGR NUMBER(4),
+     HIREDATE DATE      NOT NULL,
+     SAL NUMBER(7,2),    
+     COMM NUMBER(7,2),
+     DEPTNO NUMBER(2)   REFERENCES DEPT (DEPTNO)
+);
+
 
 INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (7369, 'SMITH', 'CLERK', 7902, TO_DATE('17-12-80', 'DD-MM-RR'), 800, NULL, 20);
 INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (7499, 'ALLEN', 'SALESMAN', 7698, TO_DATE('20-02-81', 'DD-MM-RR'), 1600, 300, 30);
@@ -39,6 +41,7 @@ INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (78
 INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (7900, 'JAMES', 'CLERK', 7698, TO_DATE('03-12-81', 'DD-MM-RR'), 950, NULL, 30);
 INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (7902, 'FORD', 'ANALYST', 7566, TO_DATE('03-12-81', 'DD-MM-RR'), 3000, NULL, 20);
 INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (7934, 'MILLER', 'CLERK', 7782, TO_DATE('23-01-82', 'DD-MM-RR'), 1300, NULL, 10);
+
 
 
 -- SALGRADE 테이블 생성
